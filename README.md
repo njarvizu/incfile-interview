@@ -19,7 +19,7 @@ Inside the project folder execute:
     
 ## Step 2: Create/copy configuration files
   Configuration files are ignored by default in the .gitignore file, copy and rename:
-  - .env
+    .env.
   
   and PUT this lines at the end of file
   INCFILEPOST_CONNECTION=https://atomic.incfile.com/fakepost
@@ -43,14 +43,14 @@ Read and edit '.env' and setup the 'Datasources' and any other configuration rel
       
 ### Step 4: Configure MAIL TRAP IN .ENV
 
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=<YOUR USERNAME>
-MAIL_PASSWORD=<YOUR PASSWORD>
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS=null
-MAIL_FROM_NAME="${APP_NAME}"
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=<YOUR USERNAME>
+    MAIL_PASSWORD=<YOUR PASSWORD>
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS=null
+    MAIL_FROM_NAME="${APP_NAME}"
 
 
 Then run the next command:
@@ -64,7 +64,7 @@ Then run the next command:
  ### Step 6: Run the queue work
   php artisan queue:work
             
-**** COMMENTS ****
+##**** COMMENTS ****
 I used a Jobs and queue to do this exercise, the connection used was "database" and "default" queue 
 
 POINT 4:
