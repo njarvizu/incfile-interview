@@ -64,22 +64,22 @@ Then run the next command:
  ### Step 6: Run the queue work
   php artisan queue:work
             
-##**** COMMENTS ****
-I used a Jobs and queue to do this exercise, the connection used was "database" and "default" queue 
+## COMMENTS 
+    I used a Jobs and queue to do this exercise, the connection used was "database" and "default" queue 
 
-POINT 4:
-I created a Job that execute a POST to url defined in the .env (INCFILEPOST_CONNECTION) then 
-entering in default queue, to save the task in table jobs. After with the command: "php artisan queue:work"
-execute each job saved.
+# POINT 4:
+    I created a Job that execute a POST to url defined in the .env (INCFILEPOST_CONNECTION) then 
+    entering in default queue, to save the task in table jobs. After with the command: "php artisan queue:work"
+    execute each job saved.
 
---- this Job tries until three times to do the request
+    --- this Job tries until three times to do the request
 
-POINT 5:
+# POINT 5:
     If the request failed then  JobFailed Event fired ant put this jobs in failed jobs table.
     Also send and email with the explain about the error
  
- Is necesary verify the failed  and execute the again with command 
- php artisan queue:retry --all
+    Is necesary verify the failed  and execute the again with command 
+     php artisan queue:retry --all
  
  
  
