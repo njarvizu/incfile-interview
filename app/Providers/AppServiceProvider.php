@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Queue::failing(function (JobFailed $event) {
-            Mail::to('njarvizu@gmail.com')->send(new FailedIncfilePostJobEmail($event));
+            Mail::to(env('FAILED_MAIL_INCFILE_FROM'))->send(new FailedIncfilePostJobEmail($event));
         });
     }
 }
